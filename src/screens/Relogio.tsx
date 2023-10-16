@@ -33,10 +33,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   titulo: {
-    fontSize: 40,
+    fontSize: 50,
 },
 relogio: {
-    fontSize: 80,
+    fontSize: 125,
 }
 
 });
