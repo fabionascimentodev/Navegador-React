@@ -1,18 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 
 export default function Contador() {
-    const [counter, setCounter] = useState<number>(0);
+  const [counter, setCounter] = useState(0);
+
   return (
-    <>
-        <Text style={styles.counte}>{counter}</Text>
-    <View style={styles.btn}>
-        <Button onPress={() => setCounter(counter+1)} title='Incrementar'/>
-        <Button onPress={() => setCounter(counter-1)} title='Decrementar'/>
-        <Button onPress={() => setCounter(counter-counter)} title='Reset'/>
+    <View style={styles.container}>
+      <Text style={styles.counter}>{counter}</Text>
+      <View style={styles.btn}>
+        <Button onPress={() => setCounter(counter + 1)} title='Incrementar' />
+        <Button onPress={() => setCounter(counter - 1)} title='Decrementar' />
+        <Button onPress={() => setCounter(0)} title='Reset' />
+      </View>
+      <StatusBar style="auto" />
     </View>
-    </>
   );
 }
 
@@ -23,14 +25,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-
-  counte:{
-    fontWeight:'bold',
-    fontSize:200
+  counter: {
+    fontWeight: 'bold',
+    fontSize: 200,
   },
-
-  btn:{
-    display:'flex',
-    justifyContent:'center'
-  }
+  btn: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginTop: 20,
+  },
 });
