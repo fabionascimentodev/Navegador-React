@@ -5,7 +5,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 React Native
 Expo
-⚠ Como usar
+Como usar
 Para copiar e executar essa aplicação, você precisa do: Git, Node.js + NPM intalados no seu computador.
 
 Baixar e instalar o projeto
